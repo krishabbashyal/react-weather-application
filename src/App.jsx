@@ -1,12 +1,16 @@
 import './App.css';
 
+
+let API = process.env.React_App_API_KEY
+
+
 async function getData() {
-  let data = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Texarkana&appid=6d4f5ac82e55cbf44a1ff5c499b60765&units=imperial')
+  let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Texarkana&appid=${API}&units=imperial`)
   let response = await data.json()
   return response
 }
 
-console.log(getData())
+getData().then(response => console.log((response)))
 
 
 function App() {
