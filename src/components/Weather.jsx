@@ -35,15 +35,14 @@ function Weather() {
           <input className = "city-input" placeholder="Search another city" onChange = {event => setCity(event.target.value)} value = {city} onKeyPress = {getData} />
     
           <header className="city-title">
-            <img src="" alt="" />
             <h1>{weatherData.name}</h1>
             <p>{titleCase(weatherData.weather[0].description)}</p>
 
           </header>
           <header className="current-temp">
             <img
-              src="http://openweathermap.org/img/wn/03d@2x.png"
-              alt="Scattered Clouds"
+              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+              alt={`Picture of ${weatherData.weather[0].description}`}
             />
             <h1>{Math.round(weatherData.main.temp)}°</h1>
           </header>
