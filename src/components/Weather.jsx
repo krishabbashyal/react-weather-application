@@ -26,8 +26,13 @@ function Weather() {
 
   if (typeof weatherData.main === 'undefined') {
       return (
-        <input className = "city-input" placeholder="Search another city" onChange = {event => setCity(event.target.value)} value = {city} onKeyPress = {getData} />
-      )
+          <div className="App">
+              <h2 className = "welcome-header">Search a city to get started.</h2>
+              <p className = "welcome-info">This app will use an API to gather weather data on the city you entered.</p>
+              <input className = "city-input-default" placeholder="Search city" onChange = {event => setCity(event.target.value)} value = {city} onKeyPress = {getData} />
+
+          </div>
+         )
     
   } else {
     return (
@@ -42,18 +47,17 @@ function Weather() {
           <header className="current-temp">
             <img
               src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-              alt={`Picture of ${weatherData.weather[0].description}`}
             />
             <h1>{Math.round(weatherData.main.temp)}°</h1>
           </header>
           <header className = "additional-temp-info">
-            <p>Low: 92° / High: 95°</p>
-            <p>Feels like 105°F</p>
+            <p>Low: {Math.round(weatherData.main.temp_min)}° / High: {Math.round(weatherData.main.temp_max)}°</p>
+            <p>Feels like {Math.round(weatherData.main.feels_like)}°</p>
           </header>
           <header className = "additional-weather-info">
-            <p>Humidity: 50%</p>
-            <p>Wind Speed: 11MPH</p>
-            <p>There are 0 clouds in the vicinity</p>
+            <p>Humidity: {weatherData.main.humidity}%</p>
+            <p>Wind Speed: {weatherData.wind.speed} mph</p>
+            <p>There are {weatherData.clouds.all} clouds in the vicinity</p>
           </header>
         </div>
         );

@@ -48,4 +48,32 @@
       margin-bottom: 50px;
   }
 
+  .App {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  .App p{
+    width: 300px;
+    line-height: 1;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .welcome-header {
+    margin-top: 100px;
+    margin-bottom: 15px;
+  }
+
+.city-input-default {
+    padding: 10px;
+    width: 300px;
+    background-color: #ffffff4b;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin-top: 25px;
+}
+
  
