@@ -31,14 +31,15 @@ function Weather() {
           <header className="city-title">
             <img src="" alt="" />
             <h1>{weatherData.name}</h1>
-            <p>Scattered Clouds</p>
+            <p>{weatherData.weather.description}</p>
+            {console.log(weatherData.weather.description)}
           </header>
           <header className="current-temp">
             <img
               src="http://openweathermap.org/img/wn/03d@2x.png"
               alt="Scattered Clouds"
             />
-            <h1>96°</h1>
+            <h1>{Math.round(weatherData.main.temp)}°</h1>
           </header>
           <header className = "additional-temp-info">
             <p>Low: 92° / High: 95°</p>
