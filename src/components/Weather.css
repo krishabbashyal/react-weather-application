@@ -1,0 +1,51 @@
+* {
+    text-align: center;
+    line-height: 0.3;
+    background-color: #282c34;
+    color: white;
+  }
+
+  ::placeholder { 
+    color: white;
+    opacity: 1; 
+  }
+
+  .city-input {
+      padding: 10px;
+      width: 300px;
+      background-color: #ffffff4b;
+      border-radius: 15px;
+      border: 1px solid black;
+      margin-top: 75px;
+  }
+
+
+  .city-title {
+    color: black;
+    padding-top: 50px;
+    font-size: 20px;
+  }
+  
+  .current-temp {
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .current-temp img {
+    height: 75px;
+  }
+  
+  .current-temp p {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .additional-temp-info {
+      font-size: 20px;
+      margin-bottom: 50px;
+  }
+
+ 
