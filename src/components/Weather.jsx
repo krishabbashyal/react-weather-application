@@ -31,8 +31,8 @@ function Weather() {
           <header className="city-title">
             <img src="" alt="" />
             <h1>{weatherData.name}</h1>
-            <p>{weatherData.weather.description}</p>
-            {console.log(weatherData.weather.description)}
+            <p>{weatherData.weather[0].description}</p>
+
           </header>
           <header className="current-temp">
             <img
