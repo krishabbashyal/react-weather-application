@@ -17,6 +17,12 @@ function Weather() {
       }
   }
 
+  const titleCase = (str) => {
+    return str.toLowerCase().split(' ').map(function(word) {
+      return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+  }
+
 
   if (typeof weatherData.main === 'undefined') {
       return (
@@ -31,7 +37,7 @@ function Weather() {
           <header className="city-title">
             <img src="" alt="" />
             <h1>{weatherData.name}</h1>
-            <p>{weatherData.weather[0].description}</p>
+            <p>{titleCase(weatherData.weather[0].description)}</p>
 
           </header>
           <header className="current-temp">
